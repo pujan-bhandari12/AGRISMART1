@@ -332,7 +332,19 @@
             </div>
         </div>
     </section>
-
+ <script src="https://cdn.jsdelivr.net/npm/ol@8.2.0/dist/ol.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Ensure OpenLayers is loaded before initializing
+        window.addEventListener('load', function() {
+            console.log('Window loaded');
+            if (typeof ol === 'undefined') {
+                console.error('OpenLayers failed to load');
+            } else {
+                console.log('OpenLayers available:', true);
+            }
+        });
+    </script>
    
 </body>
 </html>
